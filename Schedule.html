@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootnavbar.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Arrange a class Schedule</title>
+
+
+    <script>
+        nomodule > window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-ie11@5/css/bootstrap-ie11.min.css"><script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@4/ie11CustomProperties.min.js"><\/script>')
+            ;</script>
+
+
+    <style>
+        .dark {
+            background-color: rgb(21, 40, 68);
+            color: white;
+        }
+
+        .night {
+            background-color: rgb(21, 40, 68) !important;
+
+        }
+
+        .title {
+            background-color: rgb(21, 40, 68) !important;
+        }
+
+        /* .test{
+    background-color: aqua!important;
+    color: wheat;
+} */
+        .label {
+            color: white
+        }
+
+        /* .df{
+    background-color: aqua!important;
+} */
+    </style>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md df bg-white">
+        <div class="container-fluid target"><a
+                class="navbar-brand d-flex float-start flex-row flex-grow-0 justify-content-xl-start align-items-xl-center"
+                href="#">
+                <a class="" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <i class="fa fa-navicon bg-light shadow-sm" id="nav_icon"></i>
+                </a>
+                <img id="google_logo" src="assets/img/Google_2015_logo.svg.png">&nbsp; classroom</a><button
+                data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse d-xl-flex flex-nowrap justify-content-xl-center align-items-xl-center"
+                id="navcol-1">
+                <ul
+                    class="navbar-nav d-xxl-flex justify-content-center align-content-center align-self-center m-auto justify-content-xxl-center align-items-xxl-center">
+                    <li class="nav-item"><a class=" h4 na  nav-link active " href="student.html">Announcemnts</a></li>
+                    <li class="nav-item "><a class=" na h4 nav-link" href="#"
+                            style="border-bottom-style: solid;border-bottom-color: var(--bs-indigo);">Class work</a>
+                    </li>
+                    <li class="nav-item"><a class="h4 na nav-link" href="#">People</a></li>
+                </ul>
+                <ul class="navbar-nav d-flex float-none flex-grow-0 flex-shrink-0 ms-auto justify-content-xl-center">
+                    <li class="nav-item">
+
+                        <div class="form-check my-3 my-toggle form-switch">
+                            <input type="checkbox" class="form-check-input" id="darkSwitch">
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"></a><i class="fa fa-th" id="google_nav"></i></li>
+                    <li class="nav-item"><a class="nav-link" href="#"></a>
+                        <div><a href="#"><img src="assets/img/images (2).jpg" border rounded-circle" id="user_img"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col my-3">
+                        <span><i class="bi bi-x-lg bi-lg mx-2"></i></span>
+                        <span>Assignmnet</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col d-flex ">
+                        <span>
+                            <i class="bi bi-card-text mx-3"></i>
+                        </span>
+                        <div class="card test bg-light">
+                            <div class="card-body title" style="width:32em;color:rgb(0, 119, 255)">
+                                Title
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col my-3 d-flex">
+                        <span>
+                            <i class="bi bi-card-text mx-3 my-2"></i>
+                        </span>
+                        <div class="card test my-3">
+                            <div class="card-header">
+                                Instructions(optional)
+                            </div>
+                            <div class="card-body test bg-light" style="height: 12rem; width: 30rem;">
+                            </div>
+                            <div class="card-footer bi-lg">
+                                <i class="bi bi-type-bold mx-3"></i>
+                                <i class="bi bi-type-italic mx-3"></i>
+                                <i class="bi bi-type-underline mx-3"></i>
+                                <i class="bi bi-card-list mx-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mx-5">
+                        <i class="bi bi-triangle mx-3"></i>
+                        <i class="bi bi-upload mx-3"></i>
+                        <i class="bi bi-link mx-3"></i>
+                        <i class="bi bi-youtube mx-3"></i>
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+                <div class="row my-5">
+                    <div class="col mx-5 my-5">
+                        <i class="bi bi-question-circle"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3  my-5 mx-auto">
+                <div class="row ">
+                    <div class="col ">
+                        <label class="my-2 " for="hci">For</label>
+                        <div class="dropdown ">
+                            <select class="form-select  form-select-md mb-3" id="dropdownMenuLink"
+                                style="background-color:rgb(238, 235, 235); width: 10rem;">
+                                <option value="HCi">HCI</option>
+                                <option value="compArch">Circuit</option>
+                                <option value="Iot">IOT</option>
+                                <option value="Emerging">Emerging</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-2">
+                        <label for="hci">Points</label>
+                        <div class="dropdown">
+                            <select class="form-select form-select-md mb-3" id="dropdownMenuLink"
+                                style="background-color:rgb(238, 235, 235); width: 10rem;">
+                                <option value="HCi">100</option>
+                                <option value="compArch">75</option>
+                                <option value="Iot">50</option>
+                                <option value="Emerging">25</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="hci">Due</label>
+                        <div class="dropdown">
+                            <select class="form-select form-select-md mb-3" id="dropdownMenuLink"
+                                style="background-color:rgb(238, 235, 235); width: 12rem;">
+                                <option value="compArch">No due date</option>
+                                <option value="compArch">Jan 15, 2022</option>
+                                <option value="Iot">Jan 30, 2022</option>
+                                <option value="Emerging">Feb 15, 2022</option>
+                                <option value="Emerging">More</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-2">
+                        <label class="" for="topic">Topic</label>
+                        <div class="dropdown">
+                            <select class="form-select form-select-md mb-3" id="dropdownMenuLink"
+                                style="background-color:rgb(238, 235, 235); width: 12rem;">
+                                <option value="HCi">No topic</option>
+                                <option value="compArch">Topic 1</option>
+                                <option value="Iot">Topic 2</option>
+                                <option value="Emerging">Topic 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="my-2" for="hci">Rubric</label>
+                        <div class="dropdown ">
+                            <button class="btn " style="width: 12rem; background-color:rgb(238, 235, 235);"
+                                type="button" id="button">
+                                <span><i class="bi bi-plus-lg mx-3"></i></span>
+                                rubric
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-5">
+                <div class="col my-3 ms-start">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar" style="width:12rem;">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown">
+                                        All class Scedule
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item dropdown">
+                                            <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown">
+                                                Assigne
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Assign this class only</a></li>
+                                                <li><a class="dropdown-item" href="#">Assigne all classes</a></li>
+                                                <li class="nav-item dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                                        data-bs-toggle="dropdown">
+                                                        Assign other class
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Class A-D</a></li>
+                                                        <li><a class="dropdown-item" href="#">Class E-F</a></li>
+                                                        <li>
+                                                            <hr class="dropdown-divider">
+                                                        </li>
+                                                        <li><a class="dropdown-item" href="#">More</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown">
+                                                Schedule
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Schedule this class only</a></li>
+                                                <li><a class="dropdown-item" href="#">Schedule all classes</a></li>
+                                                <li class="nav-item dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                                        data-bs-toggle="dropdown">
+                                                        Schedule other class
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Class A-D</a></li>
+                                                        <li><a class="dropdown-item" href="#">Class E-F</a></li>
+                                                        <li>
+                                                            <hr class="dropdown-divider">
+                                                        </li>
+                                                        <li><a class="dropdown-item" href="#">More</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Save draft</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Discard draft</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="my-3">
+                <a href="/index.html" style="text-decoration: none;">
+                    <i class="fa fa-2x fa-home" aria-hidden="true"></i> <span style="margin-left: 2em;" class="h2 ">
+                        Classes</span>
+                </a>
+            </div>
+            <div class="my-3">
+                <i class="fa fa-2x fa-calendar-check-o" aria-hidden="true"></i> <span style="margin-left: 2em;"
+                    class="h2 ">Calander</span>
+            </div>
+            <hr>
+            <p style="font-size: 1.5em;">Enrolled</p>
+            <div style="display: flex;align-items:center;;" class="my-3">
+                <img style="width:45px" src="/assets/img/b.png" alt=""> <span style="margin-left: 2em;" class="h2 "> <a
+                        href="/teacher.html" style="text-decoration: none;">HCI Class</a> </span>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function getSelectedValue() {
+            var selectedvalue = document.getElementByID("list").value;
+            console.log(selectedvalue);
+        }
+    </script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="assets/bootstrap/js/bootnavbar.js"></script>
+    <script src="/assets/bootstrap/js/sch.js"></script>
+    <script>
+        new bootnavbar()
+    </script>
+</body>
+
+</html>
